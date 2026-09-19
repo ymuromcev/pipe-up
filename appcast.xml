@@ -1,0 +1,125 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>VoiceInput</title>
+        <item>
+            <title>0.9.0</title>
+            <pubDate>Fri, 18 Sep 2026 20:09:20 -0700</pubDate>
+            <link>https://github.com/ymuromcev/pipe-up</link>
+            <sparkle:version>900</sparkle:version>
+            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[
+VoiceInput is now **Pipe Up**. It's the same app under a new name, and the update installs as usual: your settings, dictation key, downloaded speech model and permissions stay as they were.
+
+### Added
+
+- Tasks for Claude Code. Hold the right ⌘ together with the dictation key and say what you need done. The task goes to the Claude Code already installed and signed in on your Mac, and the answer appears in a small bubble over whatever window you're in. If Claude Code asks for permission, you answer in the bubble. It's off until you turn it on in the first-launch guide or in Settings, and it needs Claude Code on a paid Claude plan or API access. Dictation works without it.
+- English works right away. You can dictate in English as soon as the app is installed: macOS's own speech engine handles it while the speech model downloads in the background, and the model takes over once it's ready. Other languages start once the model has downloaded.
+- Dictation limit. A single dictation stops at 10 minutes by default, and you can set it from 3 to 30 minutes in Settings → Dictation. What you said up to the limit is still transcribed.
+- Esc closes the menu.
+
+### Changed
+
+- A new icon for the app and the menu bar.
+- macOS 26 or later is required. Macs on older versions aren't offered this update and stay on VoiceInput 0.8.3.
+- Speech model settings moved into Settings → Dictation, under Recognition.
+
+### Fixed
+
+- A recording now stops when the Mac goes to sleep, the screen locks or a system password prompt appears, instead of leaving the microphone on. What you said up to then is still transcribed, and the recording pill says why it stopped.
+- The first press of the dictation key after the Mac has been idle or asleep works; it used to take a few tries.
+- Changing the dictation language takes effect right away instead of after a restart.
+
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput-0.9.0.zip" length="3945555" type="application/octet-stream" sparkle:edSignature="gntstSjEIdGIzMpediU3FaoW1OfJ2Hpwux5t94W9otavXLbSPnD4lFga0y7PJE64HngrTcIiaWy0kP5Gat0KCg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up900-803.delta" sparkle:deltaFrom="803" length="1751594" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="BWxXFOt9vbmn8MSyXc/jLMXqq9Mel1qfqXVila8p2203dDnIfnf1JX+VkJzn+c7LJdtpP2IWEW+H7YJNolDFBQ=="/>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up900-802.delta" sparkle:deltaFrom="802" length="1765538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5WGtyUFQ8YxnqgMQ//hNSRpCKh2fwZs8KF6EcPQu/OO4MpAZDYpCzuxLxi8sKDcytojelLDLoueGQiSyNAOzDw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.8.3</title>
+            <pubDate>Fri, 11 Sep 2026 16:34:29 -0700</pubDate>
+            <link>https://github.com/ymuromcev/voice-input-releases</link>
+            <sparkle:version>803</sparkle:version>
+            <sparkle:shortVersionString>0.8.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[
+### Добавлено
+
+- Расшифровку можно отменить. Наведи мышь на плашку расшифровки — в углу
+  появится ×; клик убирает плашку сразу, текст этой записи никуда не вставляется
+  и в буфер не кладётся, в меню — «Расшифровка отменена». Остальные записи в
+  очереди не трогаются. Запись, которая ещё ждёт очереди, до модели не доходит;
+  идущая останавливается почти сразу. С момента вставки отменить уже нельзя —
+  вставку не откатить, и крестик на это время пропадает. Клик по крестику не
+  забирает курсор из поля, где ты печатаешь; всё остальное по-прежнему кликается
+  сквозь плашку. Плашка, которая появилась или подъехала под неподвижный курсор,
+  клик не перехватывает — крестик появится, когда сдвинешь мышь.
+
+### Изменено
+
+- Подсказка «можно отпустить», которая появляется при первых залипаниях, теперь
+  держится три секунды, а потом на её месте снова таймер: на долгой диктовке
+  время нужнее, чем повторное напоминание. Смена плавная, ширина плашки не
+  прыгает.
+- Плашка расшифровки уходит раньше, чем текст попадает в поле, — текст приезжает
+  примерно на треть секунды позже, зато не из-под плашки. Если вставлять некуда
+  или часть речи не распозналась, плашка остаётся на месте и говорит об этом, как
+  и раньше. При диктовке подряд каждая следующая запись получает свой текст на те
+  же треть секунды позже предыдущей.
+- Пока модель грузится после запуска, плашка пишет «Загружаю модель…», а не
+  показывает анимацию расшифровки. Первая загрузка после установки или
+  пересборки может занять больше минуты: macOS собирает модель под Neural Engine.
+  С анимацией это выглядело как зависшая расшифровка.
+
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput-0.8.3.zip" length="2371477" type="application/octet-stream" sparkle:edSignature="PfMlJg2PtidoZVfJT6Dts9ufblcfJZOdRm8YsjHKwSy7isaABnwRU/KphkbRI7WArm4DdTqBiBjxsk351zKrCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput803-802.delta" sparkle:deltaFrom="802" length="249302" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LDg1ViZPjeyWAw7oI9EyiTkD5Huszn80MWtnL2JR/P9YZzGgBxfAS2vg9XSfiu+tJW806B7WJ/YQC0B8IsMFBw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.8.2</title>
+            <pubDate>Fri, 11 Sep 2026 03:28:40 -0700</pubDate>
+            <link>https://github.com/ymuromcev/voice-input-releases</link>
+            <sparkle:version>802</sparkle:version>
+            <sparkle:shortVersionString>0.8.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[
+### Исправлено
+
+- У длинной диктовки пропадал кусок текста — обычно хвост, иногда середина, без
+  единой ошибки где-либо. Всё, что длиннее тридцати секунд, распознаётся частями,
+  и каждая часть получала в подсказку голый список терминов из словаря. Для части,
+  которая начинается с середины фразы, такой список (особенно закрытый точкой, как
+  было) читается как «речь закончилась» — в ответ приходила пустота или
+  субтитровый штамп, а соседние части возвращались с опечатками. Теперь части
+  читаются по очереди: каждая получает словарь и последние слова предыдущей
+  части — так, как Whisper и задуман работать. На длинных записях ничего не
+  теряется ни на одной из моделей, термины пишутся как в словаре. Цена — время:
+  части идут по очереди, а не параллельно, и словарь сам занимает место в каждой.
+  Тестовая запись в 74 секунды со словарём распознаётся за 12 секунд на
+  «Быстрой» и за 36 на «Точной» (без словаря — 6 и 26). Запись до тридцати
+  секунд — одна часть, её скорость не меняется.
+- Если часть записи всё же вернётся без слов, обрезанной или не влезет в окно
+  модели целиком, приложение сразу перечитает эту часть без словаря. Если и это не поможет — плашка скажет «Часть не
+  распозналась», а в меню будет написано, что вставлено не всё, вместо того
+  чтобы молча вставить огрызок. Когда текст ушёл в буфер обмена, плашка говорит
+  и то, и другое (BL-33).
+- Встроенный словарь терминов пуст: раньше в каждую сборку был зашит рабочий
+  словарь автора, и он молча подмешивался в распознавание у всех, кто поставил
+  приложение. Словарь — только свой и только на своём маке (BL-35).
+- Подсказка «можно отпустить» больше не появляется, когда запись запущена двойным
+  нажатием: там клавишу никто и не держит. Она по-прежнему показывается первые
+  три раза, когда клавишу зажали и держат.
+
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput-0.8.2.zip" length="2339549" type="application/octet-stream" sparkle:edSignature="GWuqskNmgORp7M6amM0pIG+eeERbZFNaLXLgg6mgtxNDQJB3a0u6THgxmbfrChqYWII7i9QZHTwIe5xNVsk4BA=="/>
+        </item>
+    </channel>
+</rss>
