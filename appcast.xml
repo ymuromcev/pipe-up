@@ -3,6 +3,42 @@
     <channel>
         <title>VoiceInput</title>
         <item>
+            <title>0.9.3</title>
+            <pubDate>Mon, 05 Oct 2026 14:46:21 -0700</pubDate>
+            <link>https://github.com/ymuromcev/pipe-up</link>
+            <sparkle:version>903</sparkle:version>
+            <sparkle:shortVersionString>0.9.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[
+### Changed
+
+- The bubble scrolls back through the whole conversation, not just the last question and the last answer. Everything said in it since Claude Code started is there, one turn under another, and scrolling up goes as far back as the app has seen. A new answer still brings the panel down to the newest turn, which stands at the top of it the way it always did. A conversation that was already going when the app started begins its history here.
+- "Stop" stands next to the message it stops, beside the "Working…" line, instead of taking the place of "Open in Terminal" at the foot of the panel. "Open in Terminal" keeps its own place and is simply out of reach while a turn is going, as it was before.
+
+### Fixed
+
+- "Open in Terminal" no longer does nothing without a word. The button either hands the conversation over, or says why it cannot — the turn is still going, there is nothing said yet, or the conversation was started in another folder — and writes the reason down where it can be read afterwards. A Terminal that refuses to start is written down too, which it never was.
+- The bubble's panel opens over a full-screen app again. After the macOS 27 update it could stay behind on the ordinary desktop: the circle was there over the full-screen app, and pointing at it or clicking it showed nothing. A panel that is open when you switch desktops and is missing from the new one now comes up there by itself.
+- The bubble no longer travels across the screen when you switch desktops. It is simply in its place on the desktop you switched to — beside the Dock, or at the edge of the screen over a full-screen app. Within one desktop nothing changed.
+- Pressing ⌘ while the first-run guide waits for a dictation key no longer looks like a key that did not register. The page says why ⌘ cannot be that key, and goes on waiting for another one. The Settings window said this already.
+- The first-run guide no longer greets the sample text with "Done". When the recognition model isn't ready yet and a sample lands in the practice field, the line above it says so: "The model isn't ready yet — your text will land the same way as this sample".
+- When Claude Code turns down the first-run guide's practice command because it isn't signed in, the page says what happened and what to do: "Claude Code wouldn't take the request without sign-in — sign in, then click Try Again". It used to show the same line as a page nobody had tried yet.
+- When Claude's usage limit runs out and Claude Code doesn't say when it's back, the bubble speaks the language of the interface: "What you say meanwhile waits — press Send when the limit is back." It used to show Claude Code's own English line, on a Russian screen too.
+- A permission request with a long list of sites names whole sites and says how many more there are — "…, mirror4.registry.example.com and 10 more sites" — instead of cutting a domain in half around a number in brackets.
+- A table in Claude's answer is drawn as a table in the bubble, not as lines of bars and dashes: columns lined up, the header row on its own shade, bold and code inside cells as elsewhere, numbers set to the right when Claude sets them so. In the narrow panel long cells wrap without breaking a word in two; a table too wide even for that scrolls sideways on its own, and the rest of the answer stays in place. Copying the answer still copies it as Claude wrote it.
+
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput-0.9.3.zip" length="4406409" type="application/octet-stream" sparkle:edSignature="VsYmtxUvXYVY4Niptik1qsCGJgp7LSi+MC3nsql5Ofla50TLspLpA2oodGCdEHhyiAe1YIysysxN1RG0hT+DDQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up903-902.delta" sparkle:deltaFrom="902" length="1567334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aD05aJfFms3lO/bx0DYHJSRdQjii4PY/oYQj3r5M7JjRnZhw4mxgLMKl87E9GVuyVzU4rsFK+tlgY8njRWrDAQ=="/>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up903-901.delta" sparkle:deltaFrom="901" length="1679358" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MoK+3owbKhRK8cYVyclTLlpMd+1wB2LzZHbdY89o/+zHpKy9QXFqtVMNSlOWqnQoOSr9CUHXfuWprIqmwbheAw=="/>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up903-900.delta" sparkle:deltaFrom="900" length="1732254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3vH6Rac7hm6NszS0WlrN/7/sHHxwcLAL8JdayKYFpazojVVdu9zDrnelnIKpenIjRcnHonAR/O5Tf2Z0sQ6CDw=="/>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up903-803.delta" sparkle:deltaFrom="803" length="2482414" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3vl6ztr6XhaQD7zq+VLdQHievJQ5ATyQtOqjKuwhMN5AS+pRjggUvGr+K9ZSaigGoOGQZNlav+3Zn++dhmDKCw=="/>
+                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up903-802.delta" sparkle:deltaFrom="802" length="2489638" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ysut+ffnokxLxn+2SCQozQ+G4/BGhavY3aZerz8AMYU9tYvURm4RR5dKHMC+8h2lVdXPzYH3g5NSHxnpdBwjAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.9.2</title>
             <pubDate>Sun, 20 Sep 2026 14:42:39 -0700</pubDate>
             <link>https://github.com/ymuromcev/pipe-up</link>
@@ -97,43 +133,6 @@
                 <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up901-900.delta" sparkle:deltaFrom="900" length="689446" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Su+bwDdXIfbpvdXz0PXn5K0bntcrQKMdgArtkW2uProLqN4f8nZMD8np+qiJG5hz1+8YkWEuKQRsucQFeDNsCg=="/>
                 <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up901-803.delta" sparkle:deltaFrom="803" length="1869562" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UeDU/2rj1Y38349o3jXFLapjLT7QZx376WYZbtrSXHNssQE/0ZSsobiu9b5IqaBTaQaipannLGDFpcHIedhiAw=="/>
                 <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up901-802.delta" sparkle:deltaFrom="802" length="1885414" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4Km07lfQR+T9jhFTMuCN+Rakjf1JR4jdEq8FZHw9v1mPWVkRWnH5oA4pmkp9p+/13aPm55MoL1g1i4HdCSl1Dg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.9.0</title>
-            <pubDate>Fri, 18 Sep 2026 20:09:20 -0700</pubDate>
-            <link>https://github.com/ymuromcev/pipe-up</link>
-            <sparkle:version>900</sparkle:version>
-            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[
-VoiceInput is now **Pipe Up**. It's the same app under a new name, and the update installs as usual: your settings, dictation key, downloaded speech model and permissions stay as they were.
-
-### Added
-
-- Tasks for Claude Code. Hold the right ⌘ together with the dictation key and say what you need done. The task goes to the Claude Code already installed and signed in on your Mac, and the answer appears in a small bubble over whatever window you're in. If Claude Code asks for permission, you answer in the bubble. It's off until you turn it on in the first-launch guide or in Settings, and it needs Claude Code on a paid Claude plan or API access. Dictation works without it.
-- English works right away. You can dictate in English as soon as the app is installed: macOS's own speech engine handles it while the speech model downloads in the background, and the model takes over once it's ready. Other languages start once the model has downloaded.
-- Dictation limit. A single dictation stops at 10 minutes by default, and you can set it from 3 to 30 minutes in Settings → Dictation. What you said up to the limit is still transcribed.
-- Esc closes the menu.
-
-### Changed
-
-- A new icon for the app and the menu bar.
-- macOS 26 or later is required. Macs on older versions aren't offered this update and stay on VoiceInput 0.8.3.
-- Speech model settings moved into Settings → Dictation, under Recognition.
-
-### Fixed
-
-- A recording now stops when the Mac goes to sleep, the screen locks or a system password prompt appears, instead of leaving the microphone on. What you said up to then is still transcribed, and the recording pill says why it stopped.
-- The first press of the dictation key after the Mac has been idle or asleep works; it used to take a few tries.
-- Changing the dictation language takes effect right away instead of after a restart.
-
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/VoiceInput-0.9.0.zip" length="3945555" type="application/octet-stream" sparkle:edSignature="gntstSjEIdGIzMpediU3FaoW1OfJ2Hpwux5t94W9otavXLbSPnD4lFga0y7PJE64HngrTcIiaWy0kP5Gat0KCg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up900-803.delta" sparkle:deltaFrom="803" length="1751594" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="BWxXFOt9vbmn8MSyXc/jLMXqq9Mel1qfqXVila8p2203dDnIfnf1JX+VkJzn+c7LJdtpP2IWEW+H7YJNolDFBQ=="/>
-                <enclosure url="https://raw.githubusercontent.com/ymuromcev/pipe-up/main/updates/Pipe%20Up900-802.delta" sparkle:deltaFrom="802" length="1765538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977712" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5WGtyUFQ8YxnqgMQ//hNSRpCKh2fwZs8KF6EcPQu/OO4MpAZDYpCzuxLxi8sKDcytojelLDLoueGQiSyNAOzDw=="/>
             </sparkle:deltas>
         </item>
         <item>
